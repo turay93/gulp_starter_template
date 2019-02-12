@@ -1,0 +1,12 @@
+.welcome {
+  text-align: center;
+
+  &__title {
+    font-size: 50px;
+  }
+
+  &__text {
+    font-style: italic;
+    margin-top: 30px;
+  }
+}

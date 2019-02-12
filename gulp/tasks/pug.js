@@ -5,14 +5,14 @@ let path = {
   src: `${$.path.src}/*.pug`,
   dest: {
     dev:   `${$.path.dev}/`,
-    build: `${$.path.build}/`,
+    build: `${$.path.build}/`
   }
-}
+};
 
 $.watchs.push({
   src: [path.src, `${$.path.src}/pug/**/*.pug`],
   task: taskName
-})
+});
 
 module.exports = () => {
   $.gulp.task(taskName, () => {

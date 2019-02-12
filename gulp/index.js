@@ -4,6 +4,7 @@ let tasks = [
   `${taskPath}/clean`,
   `${taskPath}/browserSync`,
   `${taskPath}/pug`,
+  `${taskPath}/styles`,
   `${taskPath}/watch`
 ];
 

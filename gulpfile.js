@@ -1,9 +1,10 @@
 global.$ = {
   path: {
-    src:   './app',
-    dev:   './dev',
-    build: './build',
-    tasks: require('./gulp')
+    src:    './app',
+    dev:    './build',
+    build:  './production',
+    assets: 'assets',
+    tasks:  require('./gulp')
   },
   watchs:      [],
   gulp:        require('gulp'),
