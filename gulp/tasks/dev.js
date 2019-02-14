@@ -4,7 +4,8 @@ module.exports = () => {
   $.gulp.task(taskName, $.gulp.series([
     'clean',
     'pug',
-    'styles'
+    'styles',
+    'fonts'
   ], $.gulp.parallel([
     'watch',
     'browserSync'

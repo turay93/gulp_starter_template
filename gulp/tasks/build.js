@@ -4,6 +4,7 @@ module.exports = () => {
   $.gulp.task(taskName, $.gulp.series([
     'clean:build',
     'pug:build',
-    'styles:build'
+    'styles:build',
+    'fonts:build'
   ]));
 };
