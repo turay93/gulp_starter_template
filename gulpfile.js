@@ -1,8 +1,7 @@
 global.$ = {
   path: {
     src:    './app',
-    dev:    './build',
-    build:  './production',
+    dest:   './build',
     assets: 'assets',
     tasks:  require('./gulp')
   },

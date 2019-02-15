@@ -4,7 +4,7 @@ module.exports = () => {
   $.gulp.task(taskName, () => {
     $.browserSync.init({
         server: {
-          baseDir: $.path.dev,
+          baseDir: $.path.dest,
         },
         notify: false
     });

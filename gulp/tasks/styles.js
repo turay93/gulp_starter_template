@@ -5,11 +5,8 @@ let sourceMaps   = require('gulp-sourcemaps');
 let taskName     = 'styles';
 
 let path = {
-  src: `${$.path.src}/styles/*.{scss,sass}`,
-  dest: {
-    dev:   `${$.path.dev}/${$.path.assets}/styles/`,
-    build: `${$.path.build}/${$.path.assets}/styles/`
-  }
+  src:  `${$.path.src}/styles/*.{scss,sass}`,
+  dest: `${$.path.dest}/${$.path.assets}/styles/`
 };
 
 $.watchs.push({
@@ -25,7 +22,7 @@ module.exports = () => {
       .on('error', $.notify.onError({ title: taskName }))
       .pipe(autoPrefixer({ browsers: ['last 3 version'] }))
       .pipe(sourceMaps.write())
-      .pipe($.gulp.dest(path.dest.dev))
+      .pipe($.gulp.dest(path.dest))
       .pipe($.browserSync.reload({ stream: true }));
   });
 
@@ -35,6 +32,6 @@ module.exports = () => {
       .on('error', $.notify.onError({ title: taskName }))
       .pipe(autoPrefixer({ browsers: ['last 3 version'] }))
       .pipe(csso())
-      .pipe($.gulp.dest(path.dest.build));
+      .pipe($.gulp.dest(path.dest));
   });
 };

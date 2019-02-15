@@ -2,11 +2,8 @@ let pug           = require('gulp-pug');
 let taskName      = 'pug';
 
 let path = {
-  src: `${$.path.src}/*.pug`,
-  dest: {
-    dev:   `${$.path.dev}/`,
-    build: `${$.path.build}/`
-  }
+  src:  `${$.path.src}/*.pug`,
+  dest: `${$.path.dest}/`
 };
 
 $.watchs.push({
@@ -19,7 +16,7 @@ module.exports = () => {
     return $.gulp.src(path.src)
       .pipe(pug({ pretty: true }))
       .on('error', $.notify.onError({ title: taskName }))
-      .pipe($.gulp.dest(path.dest.dev))
+      .pipe($.gulp.dest(path.dest))
       .on('end', $.browserSync.reload);
   });
 
@@ -27,6 +24,6 @@ module.exports = () => {
     return $.gulp.src(path.src)
       .pipe(pug({ pretty: false }))
       .on('error', $.notify.onError({ title: taskName }))
-      .pipe($.gulp.dest(path.dest.build));
+      .pipe($.gulp.dest(path.dest));
   });
 };
