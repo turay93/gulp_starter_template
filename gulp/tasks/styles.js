@@ -6,7 +6,7 @@ let taskName     = 'styles';
 
 let path = {
   src:  `${$.path.src}/styles/*.{scss,sass}`,
-  dest: `${$.path.dest}/${$.path.assets}/styles/`
+  dest: `${$.path.assets}/styles/`
 };
 
 $.watchs.push({

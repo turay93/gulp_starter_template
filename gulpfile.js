@@ -2,7 +2,7 @@ global.$ = {
   path: {
     src:    './app',
     dest:   './build',
-    assets: 'assets',
+    assets: `./build/assets`,
     tasks:  require('./gulp')
   },
   watchs:      [],
