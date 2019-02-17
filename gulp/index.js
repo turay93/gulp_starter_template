@@ -5,6 +5,7 @@ let tasks = [
   `${taskPath}/browserSync`,
   `${taskPath}/pug`,
   `${taskPath}/images`,
+  `${taskPath}/svg`,
   `${taskPath}/styles`,
   `${taskPath}/fonts`,
   `${taskPath}/watch`

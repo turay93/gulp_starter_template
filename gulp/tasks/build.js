@@ -5,6 +5,7 @@ module.exports = () => {
     'clean',
     'pug:build',
     'images:build',
+    'svg',
     'styles:build',
     'fonts'
   ]));

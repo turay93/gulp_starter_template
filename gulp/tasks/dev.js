@@ -5,6 +5,7 @@ module.exports = () => {
     'clean',
     'pug',
     'images',
+    'svg',
     'styles',
     'fonts'
   ], $.gulp.parallel([
