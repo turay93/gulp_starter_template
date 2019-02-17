@@ -2,6 +2,7 @@ let taskPath = './gulp/tasks';
 
 let tasks = [
   `${taskPath}/clean`,
+  `${taskPath}/rootFolder`,
   `${taskPath}/browserSync`,
   `${taskPath}/pug`,
   `${taskPath}/images`,
