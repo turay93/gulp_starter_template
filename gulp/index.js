@@ -5,6 +5,7 @@ let tasks = [
   `${taskPath}/rootFolder`,
   `${taskPath}/browserSync`,
   `${taskPath}/pug`,
+  `${taskPath}/scripts`,
   `${taskPath}/images`,
   `${taskPath}/svg`,
   `${taskPath}/styles`,

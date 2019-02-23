@@ -5,6 +5,7 @@ module.exports = () => {
     'clean',
     'rootFolder',
     'pug:build',
+    'scripts:build',
     'images:build',
     'svg',
     'styles:build',
