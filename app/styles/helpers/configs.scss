@@ -1,0 +1,24 @@
+// Media breakpoints config
+$media-large-width: 1200;      // px
+$media-medium-width: 992;      // px
+$media-small-width: 768;       // px
+$media-extra-small-width: 480; // px
+
+// Container configs
+$container-width: 1200;   // px
+$container-h-padding: 30; // px
+$container-v-padding: 0;  // px
+
+// Font configs
+$font-size: 16; // px
+$font-line-height: normal;
+$font-color: #fff;
+$font-main: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Selection configs
+$selection-bg-color: #000;
+$selection-font-color: #fff;
+
+// Body configs
+$body-background: #1a1a1a url('/assets/images/background/bg.png') repeat;
+$body-padding-bottom: 0; //px

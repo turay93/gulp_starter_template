@@ -1,11 +1,60 @@
-* {
-  padding: 0;
-  margin: 0;
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    font-size: $font-size;
+
+    @include screen-medium {
+        font-size: $font-size - 1px;
+    }
+
+    @include screen-small {
+        font-size: $font-size - 2px;
+    }
+
+    @include screen-extraSmall {
+        font-size: $font-size - 3px;
+    }
+
 }
 
 body {
-  background: #1a1a1a url('/assets/images/background/bg.png') repeat;
-  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  padding: 15px; 
+    position: relative;
+    min-height: 100%;
+    font-family: $font-main;
+    line-height: $font-line-height;
+    color: $font-color;
+    background: $body-background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: rem($body-padding-bottom);
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 0;
+    font-size: rem($font-size);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+::selection {
+    background-color: $selection-bg-color;
+    color: $selection-font-color;
 }

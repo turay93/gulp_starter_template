@@ -1,0 +1,7 @@
+@function rem($target, $parent: $font-size) {
+  @return ($target / $parent) + 0rem;
+}
+
+@function proc($target, $parent: $container-width) {
+  @return ($target / $parent) * 100 + 0%;
+}

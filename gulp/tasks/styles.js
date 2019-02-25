@@ -1,5 +1,6 @@
 let sass         = require('gulp-sass');
 let csso         = require('gulp-csso');
+let gcmq         = require('gulp-group-css-media-queries');
 let autoPrefixer = require('gulp-autoprefixer');
 let sourceMaps   = require('gulp-sourcemaps');
 let taskName     = 'styles';
@@ -21,6 +22,7 @@ module.exports = () => {
       .pipe(sass())
       .on('error', $.notify.onError({ title: taskName }))
       .pipe(autoPrefixer({ browsers: ['last 3 version'] }))
+      .pipe(gcmq())
       .pipe(sourceMaps.write())
       .pipe($.gulp.dest(path.dest))
       .pipe($.browserSync.reload({ stream: true }));
@@ -31,6 +33,7 @@ module.exports = () => {
       .pipe(sass())
       .on('error', $.notify.onError({ title: taskName }))
       .pipe(autoPrefixer({ browsers: ['last 3 version'] }))
+      .pipe(gcmq())
       .pipe(csso())
       .pipe($.gulp.dest(path.dest));
   });

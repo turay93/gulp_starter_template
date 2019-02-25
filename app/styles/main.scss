@@ -1,2 +1,14 @@
-@import './base/base.scss';
+/* Helpers */
+@import './helpers/configs.scss';
+@import './helpers/variables.scss';
+@import './helpers/functions.scss';
+@import './helpers/mixins.scss';
+
+/* Base styles */
+@import './base/normalize.scss';
+@import './base/fonts.scss';
+@import './base/reset.scss';
+@import './base/general.scss';
+
+/* Components */
 @import './components/welcome';
