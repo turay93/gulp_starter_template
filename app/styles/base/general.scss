@@ -2,8 +2,4 @@
   max-width: $container-width * 1px;
   padding: rem($container-v-padding) rem($container-h-padding);
   margin: auto;
-
-  @include screen-medium {
-    display: none;
-  }
 }

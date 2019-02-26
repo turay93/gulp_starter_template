@@ -9,18 +9,13 @@ html {
     box-sizing: border-box;
     font-size: $font-size;
 
-    @include screen-medium {
+    @include media("tablet") {
         font-size: $font-size - 1px;
     }
 
-    @include screen-small {
+    @include media("phone") {
         font-size: $font-size - 2px;
     }
-
-    @include screen-extraSmall {
-        font-size: $font-size - 3px;
-    }
-
 }
 
 body {

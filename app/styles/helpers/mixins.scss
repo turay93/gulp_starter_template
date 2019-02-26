@@ -1,75 +1,11 @@
-@mixin screen-extraSmall {
-
-  $width: 480px; // Default value
-
-  @if ($media-extra-small-width) {
-      $width: $media-extra-small-width * 1px;
-  }
-
-  @media screen and (max-width: $width) {
-      @content;
-  }
-
-}
-
-@mixin screen-small  {
-
-  $width: 768px; // Default value
-
-  @if ($media-small-width) {
-      $width: $media-small-width * 1px;
-  }
-
-  @media screen and (max-width: $width) {
-      @content;
-  }
-
-}
-
-@mixin screen-medium  {
-
-  $width: 992px; // Default value
-
-  @if ($media-medium-width) {
-      $width: $media-medium-width * 1px;
-  }
-
-  @media screen and (max-width: $width) {
-      @content;
-  }
-
-}
-
-@mixin screen-large {
-
-  $width: 1200px; // Default value
-
-  @if ($media-large-width) {
-      $width: $media-large-width * 1px;
-  }
-
-  @media screen and (max-width: $width) {
-      @content;
-  }
-
-}
-
-@mixin screen-custom ($width) {    
-
-  @media screen and (max-width: $width + 0px) {
-      @content;
-  }
-
-}
-
-@mixin screen-retina {
-  @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (min--moz-device-pixel-ratio: 2),
-      only screen and (-o-min-device-pixel-ratio: 2/1),
-      only screen and (min-device-pixel-ratio: 2),
-      only screen and (min-resolution: 192dpi),
-      only screen and (min-resolution: 2dppx) {
-      @content;
+@mixin media($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+      @if $type == max {
+          $width: $width - 1px;
+      }
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
   }
 }
