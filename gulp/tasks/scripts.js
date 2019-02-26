@@ -1,5 +1,5 @@
-let uglify   = require('gulp-uglify');
-let taskName = 'scripts';
+let uglify   = require('gulp-uglify'),
+    taskName = 'scripts';
 
 let path = {
   src:  `${$.path.src}/scripts/**/*.js`,

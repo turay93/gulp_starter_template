@@ -1,6 +1,6 @@
-let cheerio = require('gulp-cheerio');
-let svgMin = require('gulp-svgmin')
-let taskName = 'svg';
+let cheerio  = require('gulp-cheerio'),
+    svgMin   = require('gulp-svgmin'),
+    taskName = 'svg';
 
 let path = {
   src:  `${$.path.src}/images/**/*.svg`,

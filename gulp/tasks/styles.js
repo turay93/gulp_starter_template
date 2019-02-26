@@ -1,9 +1,9 @@
-let sass         = require('gulp-sass');
-let csso         = require('gulp-csso');
-let gcmq         = require('gulp-group-css-media-queries');
-let autoPrefixer = require('gulp-autoprefixer');
-let sourceMaps   = require('gulp-sourcemaps');
-let taskName     = 'styles';
+let sass         = require('gulp-sass'),
+    csso         = require('gulp-csso'),
+    gcmq         = require('gulp-group-css-media-queries'),
+    autoPrefixer = require('gulp-autoprefixer'),
+    sourceMaps   = require('gulp-sourcemaps'),
+    taskName     = 'styles';
 
 let path = {
   src:  `${$.path.src}/styles/*.{scss,sass}`,

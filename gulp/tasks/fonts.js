@@ -1,4 +1,4 @@
-let  taskName = 'fonts';
+let taskName = 'fonts';
 
 let path = {
   src:  `${$.path.src}/fonts/**/*.{eot,otf,ttf,woff,woff2,svg}`,

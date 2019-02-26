@@ -1519,6 +1519,11 @@ depd@~1.1.2:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
+deprecate@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/deprecate/-/deprecate-1.1.0.tgz#bbd069d62b232175b4e8459b2650cd2bad51f4b8"
+  integrity sha512-b5dDNQYdy2vW9WXUD8+RQlfoxvqztLLhDE+T7Gd37I5E8My7nJkKu6FmhdDeRWJ8B+yjZKuwjCta8pgi8kgSqA==
+
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -2635,6 +2640,15 @@ gulp-csso@^3.0.1:
     plugin-error "^0.1.2"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-data@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/gulp-data/-/gulp-data-1.3.1.tgz#3304d5d1203d554d3385e42de78ee9204f61c8a2"
+  integrity sha512-fvpQJvgVyhkwRcFP3Y9QUS9sWvIFsAlJDinQjhLuknmHZz52jH0gHmTujYBFjr9aTlTHlrAayY5m1d0tA1HzGQ==
+  dependencies:
+    plugin-error "^0.1.2"
+    through2 "^2.0.0"
+    util-extend "^1.0.1"
+
 gulp-group-css-media-queries@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-group-css-media-queries/-/gulp-group-css-media-queries-1.2.2.tgz#c0436b9474086cbe1ab3eb5bc1a3afef4d6b37d6"
@@ -2661,6 +2675,18 @@ gulp-imagemin@^5.0.3:
     imagemin-jpegtran "^6.0.0"
     imagemin-optipng "^6.0.0"
     imagemin-svgo "^7.0.0"
+
+gulp-merge-json@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/gulp-merge-json/-/gulp-merge-json-1.3.1.tgz#38a8f69c18598085a4b33a08f4074406451e9f2a"
+  integrity sha512-J1N//k3Kfa0RgtzuJdn1pz+ROQF2AH2gOHGhebSc7NvATIKgeRTThPlBaOK+jvYfhNVpviWILAFo8QvUgNV4ig==
+  dependencies:
+    deprecate "^1.0.0"
+    json5 "^1.0.1"
+    lodash.mergewith "^4.6.1"
+    plugin-error "^1.0.1"
+    through "^2.3.8"
+    vinyl "^2.1.0"
 
 gulp-notify@^3.2.0:
   version "3.2.0"
@@ -3512,6 +3538,13 @@ json-stringify-safe@~5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
+json5@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
+  integrity sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
+  dependencies:
+    minimist "^1.2.0"
+
 jsonfile@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-3.0.1.tgz#a5ecc6f65f53f662c4415c7675a0331d0992ec66"
@@ -3712,7 +3745,7 @@ lodash.merge@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
   integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
 
-lodash.mergewith@^4.6.0:
+lodash.mergewith@^4.6.0, lodash.mergewith@^4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
   integrity sha512-eWw5r+PYICtEBgrBE5hhlT6aAa75f411bgDz/ZL2KZqYV03USvucsxcHUIlGTDTECs1eunpI7HOV7U+WLDvNdQ==
@@ -6249,6 +6282,11 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+util-extend@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/util-extend/-/util-extend-1.0.3.tgz#a7c216d267545169637b3b6edc6ca9119e2ff93f"
+  integrity sha1-p8IW0mdUUWljeztu3GypEZ4v+T8=
+
 util.promisify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/util.promisify/-/util.promisify-1.0.0.tgz#440f7165a459c9a16dc145eb8e72f35687097030"
@@ -6339,7 +6377,7 @@ vinyl-sourcemaps-apply@^0.2.0, vinyl-sourcemaps-apply@^0.2.1:
   dependencies:
     source-map "^0.5.1"
 
-vinyl@^2.0.0:
+vinyl@^2.0.0, vinyl@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-2.2.0.tgz#d85b07da96e458d25b2ffe19fece9f2caa13ed86"
   integrity sha512-MBH+yP0kC/GQ5GwBqrTPTzEfiiLjta7hTtvQtbxBgTeSXsmKQRQecjibMbxIXzVT3Y9KJK+drOz1/k+vsu8Nkg==

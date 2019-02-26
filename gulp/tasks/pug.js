@@ -1,9 +1,12 @@
-let pug           = require('gulp-pug');
-let taskName      = 'pug';
+let pug      = require('gulp-pug'),
+    data     = require('gulp-data'),
+    fs       = require('fs'),
+    taskName = 'pug';
 
 let path = {
   src:  `${$.path.src}/*.pug`,
-  dest: `${$.path.dest}/`
+  dest: `${$.path.dest}/`,
+  data: `${$.path.tmp}/data.json`
 };
 
 $.watchs.push({
@@ -11,10 +14,17 @@ $.watchs.push({
   task: taskName
 });
 
+function dataFunction () {
+  if (fs.existsSync(path.data)) {
+    return JSON.parse(fs.readFileSync(path.data));
+  }
+}
+
 module.exports = () => {
   $.gulp.task(taskName, () => {
     return $.gulp.src(path.src)
-      .pipe(pug({ pretty: true }))
+      .pipe(data(dataFunction))
+      .pipe(pug({ pretty: true, basedir: './' }))
       .on('error', $.notify.onError({ title: taskName }))
       .pipe($.gulp.dest(path.dest))
       .on('end', $.browserSync.reload);
@@ -22,7 +32,8 @@ module.exports = () => {
 
   $.gulp.task(`${taskName}:build`, () => {
     return $.gulp.src(path.src)
-      .pipe(pug({ pretty: false }))
+      .pipe(data(dataFunction))
+      .pipe(pug({ pretty: false, basedir: './' }))
       .on('error', $.notify.onError({ title: taskName }))
       .pipe($.gulp.dest(path.dest));
   });

@@ -1,8 +1,8 @@
-let del      = require('del');
-let taskName = 'clean';
+let del      = require('del'),
+    taskName = 'clean';
 
 module.exports = () => {
   $.gulp.task(taskName, () => {
-    return del($.path.dest);
+    return del([$.path.dest, $.path.tmp]);
   });
 };

@@ -1,5 +1,5 @@
-let imagemin = require('gulp-imagemin');
-let taskName = 'images';
+let imagemin = require('gulp-imagemin'),
+    taskName = 'images';
 
 let path = {
   src:  `${$.path.src}/images/**/*.{png,jpg,jpeg,gif}`,

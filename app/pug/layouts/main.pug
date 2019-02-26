@@ -6,7 +6,7 @@ html(lang="en-EN")
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		title #{title}
-		link(rel="stylesheet", href="assets/styles/main.css")
+		link(rel="stylesheet", href=`${PATH.styles}/main.css`)
 	body
 		block content
-		script(src="assets/styles/main.js")
+		script(src=`${PATH.scripts}/main.js`)
