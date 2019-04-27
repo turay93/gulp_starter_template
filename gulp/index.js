@@ -1,20 +1,14 @@
-let taskPath = './gulp/tasks';
+let fs = require('fs'),
+    taskPath = './gulp/tasks',
+    tasks = [];
 
-let tasks = [
-  `${taskPath}/clean`,
-  `${taskPath}/rootFolder`,
-  `${taskPath}/browserSync`,
-  `${taskPath}/data`,
-  `${taskPath}/pug`,
-  `${taskPath}/scripts`,
-  `${taskPath}/images`,
-  `${taskPath}/svg`,
-  `${taskPath}/styles`,
-  `${taskPath}/fonts`,
-  `${taskPath}/watch`
-];
+fs.readdirSync(taskPath).forEach(fileName => {
+  if (fileName !== 'dev.js' && fileName !== 'build.js') {
+    tasks.push(`${taskPath}/${fileName}`);
+  }
+});
 
-tasks.push(`${taskPath}/dev`);
-tasks.push(`${taskPath}/build`);
+tasks.push(`${taskPath}/dev.js`);
+tasks.push(`${taskPath}/build.js`);
 
 module.exports = tasks;
