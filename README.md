@@ -1,5 +1,5 @@
 # Gulp Starter Template
-Gulp starter template for building apps with pug and sass
+[Gulp](https://gulpjs.com) starter template for building apps with [PUG](https://pugjs.org) and [SASS](https://sass-lang.com/)
 
 ## Features
 - Pug compilation with [gulp-pug](https://www.npmjs.com/package/gulp-pug)
@@ -11,25 +11,54 @@ Gulp starter template for building apps with pug and sass
 - Compress images with [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 - And more...
 
+## How to use
+1. Open terminal
+1. Clone this repository
+```
+git clone https://github.com/turay93/gulp_starter_template.git
+```
+3. Update your package.json
+```
+"name": "Your app name",
+"description": "Your app description",
+"version": "Your app version",
+"author": "Your name and lastname",
+"homepage": "Your app domain",
+"license": "Your app license",
+"repository": {
+    "type": "git",
+    "url": "git+your repository url"
+},
+"bugs": {
+    "url": "Your app bugs report url"
+},
+```
+4. Install dependencies
+```
+cd gulp_starter_template
+npm install 
+```
+5. Start development
+```
+npm run dev
+```
+
 ## Commands
 - **dev**
-    *For launching browser-sync and gulp watchers for development*
-    ``` 
-    npm run dev     // with npm
-    yarn dev        // with yarn
-    ```
+    *Launch browser-sync and gulp watchers for development*
+``` 
+npm run dev
+```
 - **build**
     *Building for production*
-    ``` 
-    npm run build   // with npm
-    yarn build      // with yarn
-    ```
+``` 
+npm run build
+```
 - **clear**
     *Delete all temporary folders (build/, tmp/)*
-    ``` 
-    npm run clear   // with npm
-    yarn clear      // with yarn
-    ```
+``` 
+npm run clear
+```
 
 # Folder Structure
 ``` 
