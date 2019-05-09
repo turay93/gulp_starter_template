@@ -1,7 +1,7 @@
 let taskName = 'rootFolder';
 
 let path = {
-  src:  `${$.path.src}/root/**/*`,
+  src:  [`${$.path.src}/*`, `!${$.path.src}/*.pug`],
   dest: `${$.path.dest}/`
 };
 
