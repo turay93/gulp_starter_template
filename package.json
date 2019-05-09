@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/turay93/gulp-starter-template.git"
   },
-  "keywords": [],
+  "keywords": ["gulp", "sass", "pug"],
   "author": "Turay Gulmammadov <turaygulmammadov@gmail.com> (https://turay.pro)",
   "license": "UNLICENSED",
   "bugs": {

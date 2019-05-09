@@ -3,6 +3,6 @@ let del      = require('del'),
 
 module.exports = () => {
   $.gulp.task(taskName, () => {
-    return del([$.path.dest, $.path.tmp]);
+    return del([$.path.dest.root, $.path.tmp]);
   });
 };

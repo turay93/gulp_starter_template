@@ -4,13 +4,13 @@ let pug      = require('gulp-pug'),
     taskName = 'pug';
 
 let path = {
-  src:  `${$.path.src}/*.pug`,
-  dest: `${$.path.dest}/`,
+  src:  `${$.path.app.root}/*.pug`,
+  dest: `${$.path.dest.root}/`,
   data: `${$.path.tmp}/data.json`
 };
 
 $.watchs.push({
-  src: [path.src, `${$.path.src}/pug/**/*.pug`],
+  src: [path.src, `${$.path.app.root}/templates/**/*.pug`],
   task: taskName
 });
 

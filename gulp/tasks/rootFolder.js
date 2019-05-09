@@ -1,8 +1,8 @@
 let taskName = 'rootFolder';
 
 let path = {
-  src:  [`${$.path.src}/*.*`, `!${$.path.src}/*.pug`],
-  dest: `${$.path.dest}/`
+  src:  [`${$.path.app.root}/*.*`, `!${$.path.app.root}/*.pug`],
+  dest: `${$.path.dest.root}/`
 };
 
 $.watchs.push({

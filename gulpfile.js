@@ -1,10 +1,17 @@
 global.$ = {
   path: {
-    src:    './app',
-    dest:   './build',
-    assets: `./build/assets`,
-    tmp:    `./tmp`,
-    tasks:  require('./gulp')
+    app: {
+      root: './app',
+      assets: './app/assets'
+    },
+    dest: {
+      root: './build',
+      assets: './build/assets'
+    },
+    tmp: `./tmp`,
+    gulp: {
+      tasks: require('./gulp')
+    }
   },
   watchs:      [],
   gulp:        require('gulp'),
@@ -12,5 +19,5 @@ global.$ = {
   browserSync: require('browser-sync')
 }
 
-$.path.tasks.forEach(task => require(task)());
+$.path.gulp.tasks.forEach(task => require(task)());
 $.gulp.task('default', $.gulp.series('dev'));

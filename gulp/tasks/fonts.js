@@ -1,8 +1,8 @@
 let taskName = 'fonts';
 
 let path = {
-  src:  `${$.path.src}/fonts/**/*.{eot,otf,ttf,woff,woff2,svg}`,
-  dest: `${$.path.assets}/fonts/`
+  src:  `${$.path.app.assets}/fonts/**/*.{eot,otf,ttf,woff,woff2,svg}`,
+  dest: `${$.path.dest.assets}/fonts/`
 };
 
 $.watchs.push({

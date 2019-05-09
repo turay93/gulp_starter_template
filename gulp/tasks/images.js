@@ -2,8 +2,8 @@ let imagemin = require('gulp-imagemin'),
     taskName = 'images';
 
 let path = {
-  src:  `${$.path.src}/images/**/*.{png,jpg,jpeg,gif}`,
-  dest: `${$.path.assets}/images/`
+  src:  `${$.path.app.assets}/images/**/*.{png,jpg,jpeg,gif}`,
+  dest: `${$.path.dest.assets}/images/`
 };
 
 $.watchs.push({

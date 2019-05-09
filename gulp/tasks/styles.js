@@ -6,12 +6,12 @@ let sass         = require('gulp-sass'),
     taskName     = 'styles';
 
 let path = {
-  src:  `${$.path.src}/styles/*.{scss,sass}`,
-  dest: `${$.path.assets}/styles/`
+  src:  `${$.path.app.assets}/styles/*.{scss,sass}`,
+  dest: `${$.path.dest.assets}/styles/`
 };
 
 $.watchs.push({
-  src: [path.src, `${$.path.src}/styles/**/*.{scss,sass}`],
+  src: [path.src, `${$.path.app.assets}/styles/**/*.{scss,sass}`],
   task: taskName
 });
 

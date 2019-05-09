@@ -3,8 +3,8 @@ let cheerio  = require('gulp-cheerio'),
     taskName = 'svg';
 
 let path = {
-  src:  `${$.path.src}/images/**/*.svg`,
-  dest: `${$.path.assets}/images/`
+  src:  `${$.path.app.assets}/images/**/*.svg`,
+  dest: `${$.path.dest.assets}/images/`
 };
 
 $.watchs.push({

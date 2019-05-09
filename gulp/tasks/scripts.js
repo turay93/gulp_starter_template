@@ -2,8 +2,8 @@ let uglify   = require('gulp-uglify'),
     taskName = 'scripts';
 
 let path = {
-  src:  `${$.path.src}/scripts/**/*.js`,
-  dest: `${$.path.assets}/scripts/`
+  src:  `${$.path.app.assets}/scripts/**/*.js`,
+  dest: `${$.path.dest.assets}/scripts/`
 };
 
 $.watchs.push({
