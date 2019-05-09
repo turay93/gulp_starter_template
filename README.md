@@ -18,6 +18,7 @@
 git clone https://github.com/turay93/gulp_starter_template.git
 ```
 3. Update your package.json
+######*package.json*
 ```
 "name": "Your app name",
 "description": "Your app description",
